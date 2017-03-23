@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import selectBook from 'actions';
+import BookDetail from './containers/book-detail';
+
 
 class BookList extends Component {
   renderList() {
@@ -20,9 +22,12 @@ class BookList extends Component {
   }
   render() {
     return (
-      <ul className="list-group col-md-4">
-        {this.renderList()}
-      </ul>
+      <div>
+        <ul className="list-group col-md-4">
+          {this.renderList()}
+        </ul>
+        <BookDetail />
+      </div>
     )
   }
 }
